@@ -1,11 +1,11 @@
 import unittest
 from src.student import Student
 
+
 class TestStudent(unittest.TestCase):
     def setUp(self):
         self.student = Student("Ada", "E42")
 
-    @unittest.skip("delete this line to run the test")
     def test_student_has_name(self):
         self.assertEqual("Ada", self.student.name)
 
@@ -29,4 +29,5 @@ class TestStudent(unittest.TestCase):
 
     @unittest.skip("delete this line to run the test")
     def test_student_has_favourite_language(self):
-        self.assertEqual("I love Python", self.student.say_favourite_language("Python"))
+        self.assertEqual(
+            "I love Python", self.student.say_favourite_language("Python"))
